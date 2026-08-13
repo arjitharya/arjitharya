@@ -661,6 +661,7 @@ html.is-loading {
 }
 .contact__actions {
   display: flex;
+  align-items: center;
   justify-content: center;
   gap: 16px;
   margin-bottom: 34px;
