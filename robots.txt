@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arjitharya.github.io/arjitharya/sitemap.xml

@@ -505,6 +505,17 @@ html.is-loading {
   color: var(--accent);
   border-color: var(--accent);
 }
+.project-card__status {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--bg-elevated);
+  border-radius: 999px;
+  padding: 6px 12px;
+  height: fit-content;
+}
 .project-card h3 {
   font-size: 1.2rem;
   font-weight: 600;

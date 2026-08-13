@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Caveat&weight=600&size=26&pause=1000&color=a371f7&center=true&vCenter=true&width=490&height=44&lines=Incoming%20CE%20Student%20%40%20HKU;Bridging%20Software%20and%20Hardware" alt="Typing headlines" />
+  <img src="https://readme-typing-svg.demolab.com?font=Caveat&weight=600&size=26&pause=1000&color=a371f7&center=true&vCenter=true&width=490&height=44&lines=Current%20CE%20Student%20%40%20HKU;Bridging%20Software%20and%20Hardware" alt="Typing headlines" />
 </p>
 
 <p align="center">
@@ -36,20 +36,29 @@ I'm drawn to the space where software meets hardware — building systems that s
 ### Featured Projects
 
 <p align="left">
-  <a href="https://arjitharya.github.io/arjitharya/#projects"><b>NAND2Tetris (Part I) — Virtual HACK Computer</b></a><br />
-  Building a working virtual computer from first principles — layering NAND gates into adders, registers, and multiplexers until a full Hardware architecture emerged.
+  <a href="https://github.com/arjitharya/NAND2TETRIS"><b>NAND2Tetris — Virtual HACK Computer</b></a><br />
+  Building a working virtual computer from first principles — layering NAND gates into adders, registers, and multiplexers until a full architecture emerged. Hardware layer complete — currently building out the software layer.
 </p>
 
 <p align="left">
   <a href="https://github.com/arjitharya/HumorBot"><b>Humor AI Chatbot</b></a> · <a href="https://arjitharya.github.io/HumorBot/">Live Demo</a><br />
-  HumorBot is a companion that uses humor to keep your spirits high — trained over time to joke around in your own sense of humor rather than answer questions or fetch info. It's an early prototype for EVA (Empathic Virtual Assistant), a larger passion project I'm building: an Alexa-style companion specialized in emotional support for elderly care homes.
+  HumorBot is a companion that uses humor to keep your spirits high — trained over time to joke around in your own sense of humor rather than answer questions or fetch info.
+</p>
+
+<p align="left">
+  <a href="https://github.com/arjitharya/QUILL"><b>QUILL</b></a> · <a href="https://arjitharya.github.io/QUILL/">Live Demo</a><br />
+  QUILL is your quiet page that listens back. Quill doesn't try to fix you or hand out advice - it listens, remembers, and stays. Think of Quill as a locked diary that keeps you company at your lowest and loneliest.
+</p>
+
+<p align="left">
+  <b>EVA — Empathic Virtual Assistant</b> (In Progress)<br />
+  An Alexa-style companion built specifically for emotional support in elderly care homes — the long-term project HumorBot started out as a prototype for.
 </p>
 
 ### Connect With Me
 
 <p align="left">
   <a href="https://linkedin.com/in/arjitharya" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="https://instagram.com/@a.s.arjitharya" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" /></a>
   <a href="https://arjitharya.github.io/arjitharya/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Portfolio-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio" /></a>
   <a href="mailto:arjitharya@gmail.com" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 </p>
