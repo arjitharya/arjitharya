@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#f5f6f7" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<link rel="apple-touch-icon" href="assets/profile.png" />
+<title>A.S. Arjith Arya — Portfolio</title>
+<meta property="og:title" content="A.S. Arjith Arya — Incoming CE Student @ HKU" />
+<meta property="og:description" content="Portfolio of A.S. Arjith Arya — incoming Computer Engineering student at HKU, focused on robotics and the intersection of software and hardware." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="assets/profile.png" />
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" href="data:,">
+</head>
+<body>
+
+<!-- Loader -->
+<noscript><style>.loader{display:none}</style></noscript>
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__logo">
+    <span>A.S.</span>
+    <span class="loader__name-wrap"><span class="loader__name">Arjith Arya</span></span>
+  </div>
+</div>
+
+<!-- Icon sprite (avoids repeating the same SVG paths for every social/link icon) -->
+<svg style="display:none" aria-hidden="true">
+  <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></symbol>
+</svg>
+
+<!-- Navbar -->
+<header class="navbar" id="navbar">
+  <div class="container navbar__inner">
+    <a href="#home" class="logo">A.S. <em>Arjith Arya</em></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" data-nav>Home</a>
+      <a href="#about" data-nav>About</a>
+      <a href="#skills" data-nav>Skills</a>
+      <a href="#projects" data-nav>Projects</a>
+      <a href="#experience" data-nav>Experience</a>
+      <a href="#contact" data-nav>Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="hero__eyebrow">Available for opportunities</div>
+  <h1 class="hero__title">Arjith Arya Amutha Saravanakumar</h1>
+  <div class="hero__role"><span id="typewriter"></span><span class="type-cursor"></span></div>
+  <p class="hero__desc">I like building things where software meets hardware — from logic gates to robots. Currently open to internships and apprenticeship work.</p>
+  <div class="hero__actions btn-row">
+    <a href="#projects" class="btn btn-primary">View My Work</a>
+    <a href="assets/resume.pdf" class="btn btn-ghost" download>Download Resume</a>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about">
+  <div class="container about">
+    <div class="about__portrait reveal">
+      <img src="assets/profile.png" alt="A.S. Arjith Arya" width="512" height="501" />
+    </div>
+    <div class="about__text">
+      <div class="section-head reveal">
+        <div class="eyebrow">About</div>
+        <h2 class="section-title">A little about my story.</h2>
+      </div>
+      <div class="about__body reveal">
+        <p>
+          I'm an Undergraduate student at the University of Hong Kong studying Computer Engineering, having finished high school at UIA International School of Tokyo. I started out by just building websites for fun, then got serious once I interned with a ML R&D team, building passion projects and messing with circuits and digital logic in my spare time.
+        </p>
+        <p>
+          I like projects where code turns into something physical — building a computer out of NAND gates, or getting an actuator to react to sensor input. That's mostly why I've ended up focused on robotics: it's where software and hardware meet to solve real world problems.
+        </p>
+        <p>
+          Right now I'm working toward EVA (Empathic Virtual Assistant) — think of it as an Alexa built specifically to offer emotional support in elderly care homes. HumorBot was my first prototype toward that idea, and I'm continuing to build it out as a longer-term passion project.
+        </p>
+      </div>
+      <div class="about__meta reveal">
+        <div>
+          <div class="label">Based in</div>
+          <div class="value">Tokyo, Japan</div>
+        </div>
+        <div>
+          <div class="label">Currently</div>
+          <div class="value">BEng in Computer Engineering, HKU</div>
+        </div>
+        <div>
+          <div class="label">Focus</div>
+          <div class="value">Robotics and Autonomous Systems</div>
+        </div>
+        <div>
+          <div class="label">Education</div>
+          <div class="value">High School Diploma (A Level), UIA International School of Tokyo</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Skills</div>
+      <h2 class="section-title">Tools of the craft.</h2>
+      <p class="section-sub">Comfortable moving between code, circuits, and control systems.</p>
+    </div>
+    <div class="skills-groups">
+      <div class="skill-card reveal">
+        <h3>Languages</h3>
+        <div class="skill-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>Python</span>
+          <span>Java</span>
+          <span>Arduino</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h3>Focus Areas</h3>
+        <div class="skill-tags">
+          <span>Robotics &amp; Control Systems</span>
+          <span>Machine Learning</span>
+          <span>Artificial Intelligence</span>
+          <span>Digital Logic &amp; Circuits</span>
+          <span>Full Stack Development</span>
+          <span>Computer Architecture</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h3>Tools &amp; Platforms</h3>
+        <div class="skill-tags">
+          <span>NumPy / Pandas</span>
+          <span>Jupyter Notes</span>
+          <span>GitHub / Git</span>
+          <span>VS Code</span>
+          <span>Arduino IDE</span>
+          <span>AWS / Azure</span>
+          <span>Docker</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Selected Work</div>
+      <h2 class="section-title">Projects worth mentioning.</h2>
+      <p class="section-sub">A few builds spanning low-level computing and AI.</p>
+    </div>
+    <div class="projects-grid">
+
+      <article class="project-card reveal">
+        <div class="project-card__top">
+          <span class="project-card__index">01</span>
+          <div class="project-card__links">
+            <a href="https://github.com/arjitharya/NAND2TETRIS" aria-label="Repository" target="_blank" rel="noopener">
+              <svg class="icon"><use href="#i-github"></use></svg>
+            </a>
+          </div>
+        </div>
+        <h3>NAND2Tetris — Virtual HACK Computer</h3>
+        <p>Building a working virtual computer from first principles — layering NAND gates into adders, registers, and multiplexers until a full architecture emerged. Hardware layer complete — currently building out the software layer.</p>
+        <div class="project-card__tech">
+          <span>Boolean Logic</span><span>Computer Architecture</span><span>HDL</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-card__top">
+          <span class="project-card__index">02</span>
+          <div class="project-card__links">
+            <a href="https://github.com/arjitharya/HumorBot" aria-label="Repository" target="_blank" rel="noopener">
+              <svg class="icon"><use href="#i-github"></use></svg>
+            </a>
+            <a href="https://arjitharya.github.io/HumorBot/" aria-label="Live site" target="_blank" rel="noopener">
+              <svg class="icon"><use href="#i-external"></use></svg>
+            </a>
+          </div>
+        </div>
+        <h3>Humor AI Chatbot</h3>
+        <p>HumorBot is a companion that uses humor to keep your spirits high — trained over time to joke around in your own sense of humor rather than answer questions or fetch info.
+        <div class="project-card__tech">
+          <span>JavaScript</span><span>HTML</span><span>CSS</span><span>Prompt Engineering</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal">
+        <div class="project-card__top">
+          <span class="project-card__index">03</span>
+          <div class="project-card__links">
+            <a href="https://github.com/arjitharya/QUILL" aria-label="Repository" target="_blank" rel="noopener">
+              <svg class="icon"><use href="#i-github"></use></svg>
+            </a>
+            <a href="https://arjitharya.github.io/QUILL/" aria-label="Live site" target="_blank" rel="noopener">
+              <svg class="icon"><use href="#i-external"></use></svg>
+            </a>
+          </div>
+        </div>
+        <h3>QUILL</h3>
+        <p>QUILL is your quiet page that listens back. Quill doesn't try to fix you or hand out advice - it listens, remembers, and stays. Think of Quill as a locked diary that keeps you company at your lowest and loneliest.</p>
+        <div class="project-card__tech">
+          <span>JavaScript</span><span>HTML</span><span>CSS</span><span>Prompt Engineering</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- Experience -->
+<section id="experience">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Experience</div>
+      <h2 class="section-title">Where I've worked.</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="dates">July 2025 — August 2025 · 1 month</div>
+        <h3>AI Programmer Analyst Intern</h3>
+        <div class="org">Sysveda Information Technology Pvt Ltd — Tokyo</div>
+        <p>Explored ML models — linear/logistic regression, decision trees, neural networks — and trained them across several R&amp;D projects to predict outcomes and generate text from supervised data.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Education -->
+<section id="education">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Education</div>
+      <h2 class="section-title">Academic background.</h2>
+    </div>
+    <div class="education-grid">
+      <div class="edu-card reveal">
+        <div class="dates">April 2015 - June 2026</div>
+        <h3>High School Diploma (A Level)</h3>
+        <div class="org">UIA International School of Tokyo</div>
+      </div>
+      <div class="edu-card reveal">
+        <div class="dates">Sep 2026 - Present</div>
+        <h3>BEng in Computer Engineering</h3>
+        <div class="org">The University of Hong Kong (HKU)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="container contact">
+    <div class="eyebrow reveal">Contact</div>
+    <h2 class="contact__title reveal">Get in touch.</h2>
+    <p class="contact__sub reveal">
+      Open to internships, apprenticeship work, or just talking about robotics and code — reach out anytime.
+    </p>
+    <div class="contact__actions reveal">
+      <a href="mailto:arjitharya@gmail.com" class="btn btn-primary">Say hello</a>
+      <a href="assets/resume.pdf" class="btn btn-ghost" download>Download Resume</a>
+    </div>
+    <div class="social-row reveal">
+      <a href="https://github.com/arjitharya/" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg class="icon"><use href="#i-github"></use></svg>
+      </a>
+      <a href="https://linkedin.com/in/arjitharya/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+      <a href="mailto:arjitharya@gmail.com" aria-label="Email">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <span>© <span id="year"></span> A.S. Arjith Arya. All rights reserved.</span>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg class="icon" viewBox="0 0 24 24"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
