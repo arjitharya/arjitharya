@@ -2,160 +2,161 @@
   "use strict";
 
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  /* ---------------- Loader ---------------- */
   var loader = document.getElementById("loader");
+  var siteContent = document.getElementById("siteContent");
+
+  function revealPage() {
+    if (loader) loader.style.display = "none";
+    if (siteContent) siteContent.classList.add("is-ready");
+  }
+
   if (loader) {
-    document.documentElement.classList.add("is-loading");
-
-    var finishLoad = function () {
-      loader.classList.add("is-done");
-      document.documentElement.classList.remove("is-loading");
-      setTimeout(function () {
-        loader.style.display = "none";
-      }, reduceMotion ? 0 : 700);
-    };
-
     if (reduceMotion) {
-      finishLoad();
+      revealPage();
     } else {
-      setTimeout(function () {
+      window.setTimeout(function () {
         loader.classList.add("is-revealed");
-        setTimeout(finishLoad, 800);
+        window.setTimeout(function () {
+          loader.classList.add("is-done");
+          window.setTimeout(revealPage, 720);
+        }, 800);
       }, 450);
     }
+  } else {
+    revealPage();
   }
 
-  /* ---------------- Footer year ---------------- */
-  var yearEl = document.getElementById("year");
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
+  var typewriter = document.getElementById("typewriter");
+  if (typewriter) {
+    var roles = [
+      "Co-founder & CTO @ Tsukuba Tech",
+      "Computer Engineering @ HKU",
+      "Robotics & Autonomous Systems",
+      "Information & Systems Analytics"
+    ];
+    if (!reduceMotion) {
+      var roleIndex = 0;
+      var characterIndex = roles[0].length;
+      var deleting = false;
 
-  /* ---------------- Typewriter roles ---------------- */
-  var roles = [
-    "Undergraduate CE Student @ HKU",
-    "Self-Taught Programmer",
-    "Bridging Software & Hardware",
-    "Learning by Doing",
-    "Exploring AI & ML"
-  ];
-  var twEl = document.getElementById("typewriter");
-  if (twEl && !reduceMotion) {
-    var roleIndex = 0, charIndex = 0, deleting = false;
-
-    function tick() {
-      var current = roles[roleIndex];
-      if (!deleting) {
-        charIndex++;
-        twEl.textContent = current.slice(0, charIndex);
-        if (charIndex === current.length) {
-          deleting = true;
-          return setTimeout(tick, 1600);
+      function typeRole() {
+        var currentRole = roles[roleIndex];
+        if (!deleting) {
+          characterIndex += 1;
+          typewriter.textContent = currentRole.slice(0, characterIndex);
+          if (characterIndex >= currentRole.length) {
+            deleting = true;
+            window.setTimeout(typeRole, 1700);
+            return;
+          }
+        } else {
+          characterIndex -= 1;
+          typewriter.textContent = currentRole.slice(0, characterIndex);
+          if (characterIndex <= 0) {
+            deleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+          }
         }
-      } else {
-        charIndex--;
-        twEl.textContent = current.slice(0, charIndex);
-        if (charIndex === 0) {
-          deleting = false;
-          roleIndex = (roleIndex + 1) % roles.length;
-        }
+        window.setTimeout(typeRole, deleting ? 38 : 65);
       }
-      setTimeout(tick, deleting ? 35 : 65);
+
+      window.setTimeout(function () {
+        deleting = true;
+        typeRole();
+      }, 1600);
     }
-    tick();
-  } else if (twEl) {
-    twEl.textContent = roles[0];
   }
 
-  /* ---------------- Navbar scroll state ---------------- */
   var navbar = document.getElementById("navbar");
-  var toTop = document.getElementById("toTop");
-  function onScroll() {
-    var y = window.scrollY;
-    navbar.classList.toggle("is-scrolled", y > 40);
-    toTop.classList.toggle("is-visible", y > 600);
+  function updateNavbar() {
+    if (navbar) navbar.classList.toggle("is-scrolled", window.scrollY > 40);
   }
-  document.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
+  window.addEventListener("scroll", updateNavbar, { passive: true });
+  updateNavbar();
 
-  toTop.addEventListener("click", function () {
-    window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
-  });
-
-  /* ---------------- Mobile nav toggle ---------------- */
   var navToggle = document.getElementById("navToggle");
   var navLinks = document.getElementById("navLinks");
-  var lockedScrollY = 0;
+  var navScrollY = 0;
 
-  function lockBodyScroll() {
-    lockedScrollY = window.scrollY;
-    document.body.style.position = "fixed";
-    document.body.style.top = -lockedScrollY + "px";
-    document.body.style.left = "0";
-    document.body.style.right = "0";
+  function lockPageScroll() {
+    navScrollY = window.scrollY;
+    document.documentElement.classList.add("nav-open");
+    document.body.classList.add("nav-open");
   }
 
-  function unlockBodyScroll() {
-    document.body.style.position = "";
-    document.body.style.top = "";
-    document.body.style.left = "";
-    document.body.style.right = "";
-    window.scrollTo(0, lockedScrollY);
-  }
-
-  function closeNav() {
-    navLinks.classList.remove("is-open");
-    navToggle.classList.remove("is-open");
-    unlockBodyScroll();
-  }
-
-  navToggle.addEventListener("click", function () {
-    var open = navLinks.classList.toggle("is-open");
-    navToggle.classList.toggle("is-open", open);
-    if (open) {
-      lockBodyScroll();
-    } else {
-      unlockBodyScroll();
+  function unlockPageScroll(restoreScroll) {
+    document.documentElement.classList.remove("nav-open");
+    document.body.classList.remove("nav-open");
+    if (restoreScroll !== false) {
+      window.requestAnimationFrame(function () {
+        window.scrollTo({ top: navScrollY, behavior: "instant" });
+      });
     }
-  });
-  navLinks.querySelectorAll("a").forEach(function (a) {
-    a.addEventListener("click", closeNav);
-  });
+  }
 
-  /* ---------------- Active nav link on scroll ---------------- */
-  var sections = Array.prototype.slice.call(document.querySelectorAll("section[id]"));
-  var navAnchors = Array.prototype.slice.call(document.querySelectorAll('[data-nav]'));
+  function closeNav(restoreScroll) {
+    if (!navToggle || !navLinks) return;
+    var wasOpen = navLinks.classList.contains("is-open");
+    navToggle.classList.remove("is-open");
+    navLinks.classList.remove("is-open");
+    if (navbar) navbar.classList.remove("menu-open");
+    if (wasOpen) unlockPageScroll(restoreScroll);
+    navToggle.setAttribute("aria-expanded", "false");
+    navToggle.setAttribute("aria-label", "Open navigation");
+  }
+
+  if (navToggle && navLinks) {
+    navToggle.addEventListener("click", function () {
+      var open = navLinks.classList.toggle("is-open");
+      navToggle.classList.toggle("is-open", open);
+      if (navbar) navbar.classList.toggle("menu-open", open);
+      if (open) lockPageScroll();
+      else unlockPageScroll();
+      navToggle.setAttribute("aria-expanded", String(open));
+      navToggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+    });
+    navLinks.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function (event) {
+        var href = link.getAttribute("href");
+        var target = href && href.charAt(0) === "#" ? document.getElementById(href.slice(1)) : null;
+        if (!target) return;
+        event.preventDefault();
+        closeNav(false);
+        window.history.pushState(null, "", href);
+        var top = target.getBoundingClientRect().top + window.scrollY;
+        var offset = parseFloat(window.getComputedStyle(document.documentElement).scrollPaddingTop) || 0;
+        window.scrollTo({ top: top - offset, behavior: "instant" });
+      });
+    });
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 900) closeNav();
+    });
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") closeNav();
+    });
+  }
+
+  var navAnchors = Array.prototype.slice.call(document.querySelectorAll("[data-nav]"));
+  var sections = Array.prototype.slice.call(document.querySelectorAll("main section[id]"));
   if ("IntersectionObserver" in window) {
-    var navObserver = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            navAnchors.forEach(function (a) {
-              a.classList.toggle("is-active", a.getAttribute("href") === "#" + entry.target.id);
-            });
-          }
+    var navObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        navAnchors.forEach(function (anchor) {
+          anchor.classList.toggle("is-active", anchor.getAttribute("href") === "#" + entry.target.id);
         });
-      },
-      { rootMargin: "-45% 0px -50% 0px" }
-    );
-    sections.forEach(function (s) { navObserver.observe(s); });
+      });
+    }, { rootMargin: "-35% 0px -55% 0px" });
+    sections.forEach(function (section) { navObserver.observe(section); });
   }
 
-  /* ---------------- Scroll reveal ---------------- */
-  var revealEls = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window && !reduceMotion) {
-    var revealObserver = new IntersectionObserver(
-      function (entries, obs) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            obs.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.15 }
-    );
-    revealEls.forEach(function (el) { revealObserver.observe(el); });
-  } else {
-    revealEls.forEach(function (el) { el.classList.add("is-visible"); });
-  }
+  document.querySelectorAll(".project-media img").forEach(function (image) {
+    image.addEventListener("load", function () {
+      image.parentElement.classList.add("has-image");
+    });
+    image.addEventListener("error", function () {
+      image.parentElement.classList.remove("has-image");
+    });
+    if (image.complete && image.naturalWidth > 0) image.parentElement.classList.add("has-image");
+  });
 })();
