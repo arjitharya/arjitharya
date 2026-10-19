@@ -1,64 +1,85 @@
-<p align="center">
-  <a href="https://github.com/arjitharya">
-    <img src="https://capsule-render.vercel.app/api?type=transparent&fontColor=2ea043&fontSize=54&height=90&width=954&text=Hello!%20I'm%20A.S.%20Arjith%20Arya" alt="Hello! I&#39;m A.S. Arjith Arya" />
-  </a>
-</p>
+# A.S. Arjith Arya
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Caveat&weight=600&size=26&pause=1000&color=a371f7&center=true&vCenter=true&width=490&height=44&lines=Current%20CE%20Student%20%40%20HKU;Bridging%20Software%20and%20Hardware" alt="Typing headlines" />
-</p>
+Computer Engineering student at The University of Hong Kong, focused on robotics and autonomous systems. Co-founder and CTO at Tsukuba Tech.
 
-<p align="center">
-  "Learn as though you live forever, Life as though you die tomorrow."
-</p>
+Portfolio: [arjitharya.github.io/arjitharya](https://arjitharya.github.io/arjitharya/)
 
-### About Me
+## Projects
 
-I'm drawn to the space where software meets hardware — building systems that sense, decide, and act in the real world. Currently open to internships and apprenticeship work.
+### LEO: A Smart Home Assistant
 
-### My Tech Stack
+An AI assistant that works with apps and files and learns repeated tasks. I expanded the assistant to be more user-friendly and accessible on macOS. Its beta prototype is being tested with users.
 
-<p align="left">
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" />
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
-  <img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="pandas" />
-  <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy" />
-  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
-  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white" alt="AWS" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-  <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=vscodium&logoColor=white" alt="VS Code" />
-</p>
+**Status:** In progress · **Built with:** Python · **With:** Tsukuba Tech
 
-### Featured Projects
+### NAND2Tetris — Virtual HACK Computer
 
-<p align="left">
-  <a href="https://github.com/arjitharya/NAND2TETRIS"><b>NAND2Tetris — Virtual HACK Computer</b></a><br />
-  Building a working virtual computer from first principles — layering NAND gates into adders, registers, and multiplexers until a full architecture emerged. Hardware layer complete — currently building out the software layer.
-</p>
+A virtual computer built from first principles, layering NAND gates into adders, registers, multiplexers, and a HACK CPU in HDL. The hardware layer is complete; the assembler and VM are in progress.
 
-<p align="left">
-  <a href="https://github.com/arjitharya/HumorBot"><b>Humor AI Chatbot</b></a> · <a href="https://arjitharya.github.io/HumorBot/">Live Demo</a><br />
-  HumorBot is a companion that uses humor to keep your spirits high — trained over time to joke around in your own sense of humor rather than answer questions or fetch info.
-</p>
+[GitHub repository](https://github.com/arjitharya/NAND2TETRIS)
 
-<p align="left">
-  <a href="https://github.com/arjitharya/QUILL"><b>QUILL</b></a> · <a href="https://arjitharya.github.io/QUILL/">Live Demo</a><br />
-  QUILL is your quiet page that listens back. Quill doesn't try to fix you or hand out advice - it listens, remembers, and stays. Think of Quill as a locked diary that keeps you company at your lowest and loneliest.
-</p>
+### Q.U.I.L.L
 
-<p align="left">
-  <b>EVA — Empathic Virtual Assistant</b> (In Progress)<br />
-  An Alexa-style companion built specifically for emotional support in elderly care homes — the long-term project HumorBot started out as a prototype for.
-</p>
+A private journaling companion designed to listen, remember past entries, and avoid unsolicited advice. Live demo; in development since June 2026.
 
-### Connect With Me
+[GitHub repository](https://github.com/arjitharya/QUILL) · [Live demo](https://arjitharya.github.io/QUILL/)
 
-<p align="left">
-  <a href="https://linkedin.com/in/arjitharya" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="https://arjitharya.github.io/arjitharya/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Portfolio-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio" /></a>
-  <a href="mailto:arjitharya@gmail.com" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-</p>
+### SafeCity
+
+A location-aware safety app for travelers in unfamiliar cities. On a three-person team, I worked on frontend development and API integrations. The prototype connects location detection, emergency information for about 50 countries, nearby-help mapping, USGS earthquake alerts, and a local Ollama assistant.
+
+**FutureHacks Hackathon:** June 24–28, 2026 · **Built with:** React, Vite, Leaflet.js, Tailwind CSS, Framer Motion, HTML, CSS
+
+[GitHub repository](https://github.com/arjitharya/SafeCity) · [Devpost](https://devpost.com/software/safecity-43yrgt)
+
+## Experience
+
+### Co-founder & Chief Technology Officer — Tsukuba Tech
+**March 2025–present · Tsukuba, Japan**
+
+Co-founded the technical function and built the studio's first internship program. Lead 8–10 interns across frontend, documentation, and UI/UX on TanzzAI's product documentation and marketing site in Next.js. Run weekly reviews and stand-ups, and resolve technical blockers.
+
+### AI Programmer Analyst Intern — Sysveda Information Technology Pvt Ltd
+**July–August 2025 · Tokyo, Japan**
+
+Reached **86.3% accuracy** with a Random Forest model on a 10,000-row dataset while comparing regression, decision-tree, and neural-network approaches across R&D projects. Also worked with a team on an AWS Bedrock report-transcription agent.
+
+## Education
+
+### BEng in Computer Engineering — The University of Hong Kong
+**September 2026–present**
+
+Focus: Robotics & Autonomous Systems · Minor: Information & Systems Analytics
+
+### Cambridge International A-Levels — UIA International School of Tokyo
+**April 2015–June 2026**
+
+AS: 4 As · A-Level: 3 A*s, 1 A · IGCSE: 6 A*s
+
+Activities: President, Coding & Robotics Club · 3-time Model United Nations winner · House Captain
+
+## Skills
+
+- **Programming:** HTML, CSS, JavaScript, Python, Java, C++ (basics)
+- **Tools & platforms:** NumPy, Pandas, Jupyter Notebook, GitHub, Git, VS Code, Arduino IDE, AWS, Azure, Docker
+
+## Awards
+
+- Future Leader Scholarship, UIA International School of Tokyo (2 years)
+- High Honor Roll (95%+), UIA International School of Tokyo (3 years)
+
+## Certifications
+
+- [Modern Web Development with JavaScript, jQuery & TypeScript](https://www.udemy.com/certificate/UC-50933755-e385-4e79-9ab1-4c65989c0d6a/) — Udemy, October 2026
+- [Python Programming for Beginners](https://www.udemy.com/certificate/UC-4be9f594-c940-4073-b481-43814660f380/) — Udemy, August 2026
+- [Software Engineering Job Simulation](https://www.theforage.com/completion-certificates/32A6DqtsbF7LbKdcq/jhiG2W9K8KLZK8nXP_32A6DqtsbF7LbKdcq_6a65c08be22952070f50fd22_1785242578754_completion_certificate.pdf) — Forage (Quantium), July 2026
+- [Cyber Security Operations Job Simulation](https://www.theforage.com/completion-certificates/gCW7Xki5Y3vNpBmnn/yTszJTvkHFBH6zAn3_gCW7Xki5Y3vNpBmnn_6a65c08be22952070f50fd22_1785061160855_completion_certificate.pdf) — Forage (Datacom), July 2026
+- [Robotics and Controls Job Simulation](https://www.theforage.com/completion-certificates/3w79S9RRBtn9noDWZ/q8m3gpN4ETXnjapPq_3w79S9RRBtn9noDWZ_6a65c08be22952070f50fd22_1785153906494_completion_certificate.pdf) — Forage (Johnson & Johnson), July 2026
+- [Agents League: Reasoning Agents](https://globalai.community/badges/c8745224-0a0a-48aa-851a-91c3806082de) — Global AI Community / Microsoft, July 2026
+- [Java Tutorial for Complete Beginners](https://www.udemy.com/certificate/UC-e2fbc390-dc2a-41dd-afb1-c49e2a58ca70/) — Udemy, September 2025
+
+## Contact
+
+- Email: [arjitharya@gmail.com](mailto:arjitharya@gmail.com)
+- GitHub: [github.com/arjitharya](https://github.com/arjitharya/)
+- LinkedIn: [linkedin.com/in/arjitharya](https://linkedin.com/in/arjitharya/)
