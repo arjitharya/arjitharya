@@ -5,11 +5,7 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Inter&size=22&pause=1000&color=46577A&center=true&vCenter=true&width=650&height=40&lines=Computer+Engineering+%40+HKU;Co-founder+%26+CTO+%40+Tsukuba+Tech;Robotics+%26+Autonomous+Systems" alt="Computer Engineering at HKU; Co-founder and CTO at Tsukuba Tech; Robotics and Autonomous Systems" />
-</p>
-
-<p align="center">
-  Computer Engineering student at The University of Hong Kong, focused on robotics and autonomous systems.
+  <img src="https://readme-typing-svg.demolab.com?font=Inter&size=22&pause=1000&color=46577A&center=true&vCenter=true&width=650&height=40&lines=Computer+Engineering+%40+HKU;Co-founder+%26+CTO+%40+Tsukuba+Tech;Robotics+%26+Autonomous+Systems" alt="Computer Engineering at HKU; Co-founder and CTO at Tsukuba Tech; Robotics and Autonomous Systems: Information Systems and Analytics" />
 </p>
 
 ### Tech Stack
